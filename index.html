@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<title>Select</title>
+<script>
+    function myFunction() {
+        //Index method
+        varIndex=FormRegistrazione.selectStato.selectedIndex;
+        alert(varIndex);
+
+        //Value method
+        varValue= document.getElementById("selectStato").value;
+        alert(varValue);
+
+        //Text method
+        varText=FormRegistrazione.selectStato.options[index].text;
+        alert(varText);
+    }
+</script>
+<body>
+    <form name="FormRegistrazione">Scegli lo stato: 
+        <select id="selectStato">                          
+            <option value="US">US</option>                   <!--Index 0-->
+            <option value="IT">Italy</option>                <!--Index 1-->
+            <option value="DE">Germany</option>              <!--Index 2-->
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="myFunction()">
+    </form>
+</body>
+</html> 
